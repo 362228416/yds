@@ -12,7 +12,6 @@ exports.topy = function(req, res) {
     var output = req.query['output'] ? req.query['output'] : 'text';
     var callback = req.query['callback'] ? req.query['callback'] : '$$_callback && $$_callback';
 
-
     var py = '', s;
     for (var i=0; i < cn.length; i++){
         if (pydic.indexOf(cn.charAt(i)) !=-1 && cn.charCodeAt(i) > 200) {
@@ -28,7 +27,7 @@ exports.topy = function(req, res) {
         }
     }
 
-
+    // 目前支持三种输出格式
     if (output == 'jsonp') {
         res.send(callback + ' && ' + callback + '({"result": "' + py + '"})');
     } else if(output == 'xml') {
