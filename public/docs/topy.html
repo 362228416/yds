@@ -5,7 +5,7 @@
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <script>
         $(function(){
-            $.getJSON('http://localhost:3000/topy?output=jsonp&callback=?', {cn: '中文'}, function(data){
+            $.getJSON('http://yd4p.cfapps.io/topy?output=jsonp&callback=?', {cn: '中文'}, function(data){
                 $('#main').html(data.result);
             })
         })

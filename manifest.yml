@@ -1,9 +1,9 @@
 --- 
 applications: 
-- name: yds
-  memory: 256M
+- name: yd4p
+  memory: 128M
   instances: 2
-  host: yds
+  host: yd4p
   domain: cfapps.io
   path: .
   command: node app.js
